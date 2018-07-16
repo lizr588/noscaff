@@ -1,0 +1,21 @@
+<h1>All the Products</h1>
+
+<table border="2">
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Quantity</th>
+  </tr>
+
+  <% @products.each do |product| %>
+    <tr>
+      <td><%= product.name %></td>
+      <td><%= number_to_currency product.price %></td>
+      <td><%= product.quantity %></td>
+    </tr>
+    <% end %>
+</table>
+
+<p>
+  <%= link_to "Return to Index", root_path %>
+</p>
